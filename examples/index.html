@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>API examples - Fast Connect 3 Credential Insertion API</title>
+  
+
+  <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="../css/override.css" type="text/css" />
+  <link rel="stylesheet" href="../css/font-awesome.css" type="text/css" />
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "API examples";
+    var mkdocs_page_input_path = "examples.md";
+    var mkdocs_page_url = "/examples/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/custom.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+	<div class="header-top">
+		<div class="header-top-left">
+			<a href="http://citrix.github.io" class="logo-position"><img height="60" src="https://thumbnail-ec2.sharefile.com/thumbnail.aspx?encparams=ypL2J0l-In6gqXJ7yeyKP8A1rqwKMH-C8-nfkJcHJNIN7Y0yZiJsYOcUe-uc0YeZzWLQSFSd1FnuMHPa30XSSINHuGOA8nvvnBT5WmjGlKvd5mxJ4IfT7iTVyHELwhWQiNCznPCiIFyhkA78uKX77PlU2iyhM4YdRM1NKabBe-4wXuiFJsbtAxyJ2UukO_E2ZSf1W3l75Dw8G0zflVkT-EFqyx1zSGId0qzLjm6nzJ8dA9zo-1AJzUisdzmGMzHOq_LMsOWyaalvmcWvCkl-q10GBSbfekfTIFW9LpZNYjkLNSnK8rcwNjWVr_jYayrGjIj2e5dDIMiDj3NRvW51AvHRjxYH9xRRRtY$" target="_blank" class="logo-citrix"><span style="color:#fff;font-size: 20px;position: relative;top:4px;left: 5px">SDK Reference</span></a>
+		</div>
+		<div class="header-top-right">
+			<ul>
+			<!--	<li class="list-inline home"><a href="..">HOME</a></li>
+				<li class="list-inline support"><a href="http://support.citrix.com">SUPPORT</a></li>-->
+				<form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <li class="list-inline support"><input name="q" id="txtName" type="text" placeholder="Search SDKs" 
+            class="searchdocs">
+<a class="fa fa-search errspan"></a></li>
+</form>
+				<!--<li class="list-inline"><a href="http://citrix.com/download">DOWNLOADS</a></li>-->
+			</ul>
+
+		</div>
+	</div>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="..">Fast Connect 3 Credential Insertion API</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="../whats-new/">What's new</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="../setting-up-your-environment/">Setting up your environment</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="../api-functions/">API functions</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" style="width:250px;" href="../launching-applications-and-session-management/">Launching Applications and Session Management using the Self Service Plug-in (SSP)</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <span class="expli"><i class="fa fa-plus-square-o" aria-hidden="true"></i></span><a class="current" style="width:250px;" href="./">API examples</a>
+        
+            <ul style="display:none">
+            
+                <li class="toctree-l3"><a href="#api-examples">API examples</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-1-log-on-a-user">Example 1: Log on a user</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-2-log-on-a-user-with-a-smart-card">Example 2: Log on a user with a smart card</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-3-log-off-a-user">Example 3: Log off a user</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-4-managing-an-exclusive-endpoint">Example 4: Managing an exclusive endpoint</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-5-managing-user-restore-and-shared-endpoints">Example 5: Managing user restore and shared endpoints</a></li>
+                
+                    <li><a class="toctree-l4" href="#example-6-checking-for-reconnecting-sessions">Example 6: Checking for reconnecting sessions</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+         <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>API examples</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+          <div role="main">
+            <div class="section">
+             
+                <h1 id="api-examples"><a class="toclink" href="#api-examples">API examples</a></h1>
+<p>A simple command-line driven test program is provided in the same .zip
+file as this document as a sample to demonstrate the usage of these
+APIs. Below are some code snippets from the sample.</p>
+<h2 id="example-1-log-on-a-user"><a class="toclink" href="#example-1-log-on-a-user">Example 1: Log on a user</a></h2>
+<p>The following code provides user credentials to SSO to log on a user.</p>
+<div class="codehilite"><pre><span></span><span class="n">BOOL</span> <span class="nf">DoLogonSsoUser</span><span class="p">(</span><span class="k">const</span> <span class="kt">wchar_t</span><span class="o">*</span> <span class="n">pUsername</span><span class="p">,</span> <span class="k">const</span> <span class="kt">wchar_t</span> <span class="o">*</span> <span class="n">pPassword</span><span class="p">,</span> <span class="k">const</span> <span class="kt">wchar_t</span> <span class="o">*</span><span class="n">pDomain</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">DWORD</span> <span class="n">rc</span><span class="p">;</span>
+    <span class="n">DWORD</span> <span class="n">result</span><span class="p">;</span> 
+    <span class="n">MSV1_0_INTERACTIVE_LOGON</span> <span class="n">msv1Logon</span><span class="p">;</span>
+
+    <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="n">pUsername</span> <span class="o">||</span> <span class="o">!</span> <span class="n">pPassword</span> <span class="o">||</span> <span class="o">!</span><span class="n">pDomain</span><span class="p">)</span> 
+        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">UserName</span><span class="p">.</span><span class="n">Length</span> <span class="o">=</span> <span class="p">(</span><span class="n">USHORT</span><span class="p">)(</span><span class="n">wcslen</span><span class="p">(</span><span class="n">pUsername</span><span class="p">)</span> <span class="o">*</span> 
+  <span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="p">));</span>
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">UserName</span><span class="p">.</span><span class="n">MaximumLength</span> <span class="o">=</span> <span class="n">msv1Logon</span><span class="p">.</span><span class="n">UserName</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> 
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">UserName</span><span class="p">.</span><span class="n">Buffer</span> <span class="o">=</span> <span class="p">(</span><span class="n">PWSTR</span><span class="p">)</span><span class="n">pUsername</span><span class="p">;</span>
+
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">Password</span><span class="p">.</span><span class="n">Length</span> <span class="o">=</span> <span class="p">(</span><span class="n">USHORT</span><span class="p">)(</span><span class="n">wcslen</span><span class="p">(</span><span class="n">pPassword</span><span class="p">)</span> <span class="o">*</span> 
+  <span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="p">));</span>
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">Password</span><span class="p">.</span><span class="n">MaximumLength</span> <span class="o">=</span> <span class="n">msv1Logon</span><span class="p">.</span><span class="n">Password</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span> 
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">Password</span><span class="p">.</span><span class="n">Buffer</span> <span class="o">=</span> <span class="p">(</span><span class="n">PWSTR</span><span class="p">)</span><span class="n">pPassword</span><span class="p">;</span>
+
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">LogonDomainName</span><span class="p">.</span><span class="n">Length</span> <span class="o">=</span> <span class="p">(</span><span class="n">USHORT</span><span class="p">)(</span><span class="n">wcslen</span><span class="p">(</span><span class="n">pDomain</span><span class="p">)</span> <span class="o">*</span> 
+  <span class="k">sizeof</span><span class="p">(</span><span class="kt">wchar_t</span><span class="p">));</span>
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">LogonDomainName</span><span class="p">.</span><span class="n">MaximumLength</span> <span class="o">=</span> <span class="n">msv1Logon</span><span class="p">.</span><span class="n">LogonDomainName</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">LogonDomainName</span><span class="p">.</span><span class="n">Buffer</span> <span class="o">=</span> <span class="p">(</span><span class="n">PWSTR</span><span class="p">)</span><span class="n">pDomain</span><span class="p">;</span>
+    <span class="n">msv1Logon</span><span class="p">.</span><span class="n">MessageType</span> <span class="o">=</span> <span class="n">MsV1_0InteractiveLogon</span><span class="p">;</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;calling LogonSsoUser...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">rc</span> <span class="o">=</span> <span class="n">LogonSsoUser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msv1Logon</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">result</span><span class="p">);</span> 
+
+    <span class="n">SecureZeroMemory</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msv1Logon</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">msv1Logon</span><span class="p">));</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="n">LOGONSSOUSER_OK</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">LogonSsoUser() failed: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">rc</span><span class="p">);</span> 
+        <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> User logged on. Result of LogonSsoUser(): %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span> 
+    <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="example-2-log-on-a-user-with-a-smart-card"><a class="toclink" href="#example-2-log-on-a-user-with-a-smart-card">Example 2: Log on a user with a smart card</a></h2>
+<p>The following code provides user credentials to SSO to log on a user with a smart card.</p>
+<div class="codehilite"><pre><span></span><span class="n">BOOL</span> <span class="nf">DoLogonSsoUserWithPin</span><span class="p">(</span><span class="k">const</span> <span class="kt">wchar_t</span><span class="o">*</span> <span class="n">pin</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">DWORD</span> <span class="n">rc</span><span class="p">;</span>
+    <span class="n">DWORD</span> <span class="n">result</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">InitLibrary</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">pin</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">pfnLogOnUserWithPin</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;calling LogonSsoUserWithPin...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">rc</span> <span class="o">=</span> <span class="n">pfnLogOnUserWithPin</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="n">disconnect</span><span class="p">,</span> <span class="n">restartPna</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">result</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">rc</span> <span class="o">!=</span> <span class="n">LOGONSSOUSER_OK</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">LogonSsoUserWithPin() failed: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">rc</span><span class="p">);</span> 
+            <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> User logged on. Result of LogonSsoUserWithPin(): %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;InitLibrary() Failure</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span> 
+    <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="example-3-log-off-a-user"><a class="toclink" href="#example-3-log-off-a-user">Example 3: Log off a user</a></h2>
+<p>This function performs a logoff from an SSO perspective, removing the user’s credentials from the system for the purposes of future SSO-based authorization. Existing authorized sessions can still be used. If the previous user was not logged off, that user’s credentials are restored (see example 4).</p>
+<p>ICO/CCM interfaces can be used to perform full logoff/disconnect.</p>
+<div class="codehilite"><pre><span></span><span class="kt">void</span> <span class="nf">DoLogoffSsoUser</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span> <span class="n">LogoffSsoUser</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="n">LOGONSSOUSER_OK</span> <span class="p">)</span> 
+     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> User logged off</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+  <span class="k">else</span>
+     <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s"> Error logging off user</span><span class="se">\n</span><span class="s">”);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="example-4-managing-an-exclusive-endpoint"><a class="toclink" href="#example-4-managing-an-exclusive-endpoint">Example 4: Managing an exclusive endpoint</a></h2>
+<p>If the current user is not logged off and a new user is logged on, the previous user’s credentials are saved by the system to be restored when the current user logs off. Only a single level of restore is supported. Logging off a second time without an intervening logon will result in clearing the SSO credentials and will require authentication before launching new sessions. This supports the following scenario using Controller, which is a custom application using <code>CtxCredApi</code>, <code>ICO</code>:</p>
+<ol>
+<li>A kiosk is auto-logged on with a default/generic user (could be the normal Windows logon or Controller calls <code>LogonSsoUser()</code>)</li>
+<li>The kiosk is then available with generic credentials for customer use.</li>
+<li>Sales Rep A logs on with his own credentials:
+    a.  Controller calls <code>LogonSsoUser()</code>.
+    b. Controller disconnects generic user’s sessions.
+    c. Controller roams existing sessions for Sales Rep A.</li>
+<li>The kiosk can launch new sessions using Sales Rep A’s credentials.</li>
+<li>Sales Rep A logs off:
+    a. Controller calls <code>LogoffSsoUser()</code>, removing Sales Rep A’s credentials and restoring the generic user.
+    b. Controller restores generic user’s sessions.</li>
+<li>The kiosk is back to its initial state and is available for use with generic credentials.</li>
+<li>Sales Rep B logs on (repeat 3-5 for Sales Rep B).</li>
+<li>The kiosk is back to its initial state.</li>
+</ol>
+<p>This scenario can be repeated indefinitely.</p>
+<h2 id="example-5-managing-user-restore-and-shared-endpoints"><a class="toclink" href="#example-5-managing-user-restore-and-shared-endpoints">Example 5: Managing user restore and shared endpoints</a></h2>
+<p>If the current user is not logged off and a new user is logged on, the previous user’s credentials are saved by the system to be restored when the current user logs off. Only a single level of restore is supported. Logging off a second time without an intervening logon will result in clearing the SSO credentials and will require authentication before launching new sessions. This supports the following scenario using Controller, which is a custom application using CtxCredApi, ICO:</p>
+<ol>
+<li>A nurse logs on normally and launches sessions. (Controller calls <code>LogonSsoUser()</code> or could be a Windows logon).</li>
+<li>A doctor “taps in”:
+    a. Controller executes <code>LogonSsoUser()</code> with the doctor’s credentials.
+    b. Controller does not log off the nurse or disconnect sessions.
+    c. Controller causes any existing doctor’s sessions to be roamed to this endpoint .</li>
+<li>At this point both the nurse’s and the doctor’s sessions are active. New sessions will be launched using the doctor’s credentials.</li>
+<li>The doctor “taps out”:
+    a. Controller calls <code>LogoffSsoUser()</code>, removing the doctor’s credentials and restoring the nurse’s.
+    b. Controller disconnects the doctor’s sessions.
+    c. The nurse’s sessions are still active. </li>
+<li>The nurse resumes as at Step 1.</li>
+</ol>
+<h2 id="example-6-checking-for-reconnecting-sessions"><a class="toclink" href="#example-6-checking-for-reconnecting-sessions">Example 6: Checking for reconnecting sessions</a></h2>
+<p>Some applications may need to determine whether sessions are being reconnected before launching new instances. The ICO interface, ICACLient::EnumerateCCMSessions(), reports the IDs of the ICA sessions that already exist and that are being formed. This interface can be used by the caller to heuristically determine whether new ICA sessions are being formed, for example after Receiver is restarted and is automatically reconnecting disconnected sessions.</p>
+<p>After Receiver restarts, the caller may call this operation several times at regular intervals for a reasonable period of time (for example, two seconds). If, during that time, the operation reports new ICA sessions, the caller can conclude that those sessions are the reconnected sessions. If the period of time expires and the operation reports no new ICA sessions, the caller can conclude that no session reconnect attempts are being made. The IsReconnectInProgress() API can also be used to check for reconnecting sessions, as shown in the following example:</p>
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">40000</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">2000</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;IsReconnectInProgress %d seconds left to wait</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">40000</span> <span class="o">-</span> <span class="n">i</span><span class="p">)</span> <span class="o">/</span>
+<span class="mi">1000</span><span class="p">);</span>
+        <span class="n">BOOL</span> <span class="n">bReconnectInProgress</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span>
+        <span class="n">DWORD</span> <span class="n">status</span> <span class="o">=</span> <span class="n">pfnIsReconnectInProgress</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span>
+<span class="o">&amp;</span><span class="n">bReconnectInProgress</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">ERROR_SUCCESS</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">bReconnectInProgress</span><span class="p">)</span>
+             <span class="p">{</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;IsReconnectInProgress: Reconnect in Progress</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+             <span class="p">}</span>
+             <span class="k">else</span>
+             <span class="p">{</span>
+                <span class="n">printf</span><span class="p">(</span><span class="s">&quot;IsReconnectInProgress: No Reconnect</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+             <span class="p">}</span>
+             <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="n">ERROR_TIMEOUT</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;IsReconnectInProgress: TIMEOUT</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;IsReconnectInProgress: Error: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">status</span><span class="p">);</span> 
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</pre></div>
+              
+               
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span class="prev"><a href="../launching-applications-and-session-management/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+</body>
+</html>
