@@ -2,9 +2,7 @@
 
 The Fast Connect 3 Credential Insertion API provides an interface that
 supplies user credentials to the single sign-on (SSO) feature of Citrix
-Receiver for Windows 4.2 and later. Using this API, Citrix partners
-
-can provide authentication and SSO products that use StoreFront or the
+Receiver for Windows 4.2 and later. Using this API, Citrix partners can provide authentication and SSO products that use StoreFront or the
 Web Interface to log users on to virtual applications or desktops and
 then disconnect users from those sessions.
 
