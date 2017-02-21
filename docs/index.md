@@ -1,4 +1,4 @@
-#Introduction
+#Fast Connect 3 Credential Insertion API for Citrix Receiver for Windows
 
 The Fast Connect 3 Credential Insertion API provides an interface that
 supplies user credentials to the single sign-on (SSO) feature of Citrix
