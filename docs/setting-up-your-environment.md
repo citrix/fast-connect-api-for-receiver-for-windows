@@ -35,7 +35,8 @@ GUI. ![](./gpedit-msc-gui.png)
 &#57;. To allow Fast Connect functionality, locate the GPO policy Manage FastConnectAPI support, double-click it, and then enable the following options:
 
   * Enable the GPO
-  * Enable Fast Connect API Functionality Disable Leave Apps Running On
+  * Enable Fast Connect API Functionality 
+  * Disable Leave Apps Running On
   * Logoff
   * Enable Integrate Self Service Plugin with FastConnect
 
@@ -60,7 +61,10 @@ GUI. ![](./gpedit-msc-gui.png)
 
 &#49;&#51;. If you are using StoreFront, add the FQDN of the XenDesktop Controller to the intranet zone: ![](./add-fqdn.png)
 You can set this through Group Policy:
-* Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Internet Explorer** > **Internet Control Panel** > **Security Page*** Select **Site to Zone Assignment List**, enable it, then add the FQDN of the XenDesktop Controller as a zone assignment with a value of **1**. For more details, see[http://blogs.msdn.com/b/askie/archive/2012/06/05/how-to-configure-internet-explorer- security-zone-sites-using-group-polices.aspx]()
+
+* Select **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Internet Explorer** > **Internet Control Panel** > **Security Page**
+* Select **Site to Zone Assignment List**, enable it, then add the FQDN of the XenDesktop Controller as a zone assignment with a value of **1**. For more details, see
+[http://blogs.msdn.com/b/askie/archive/2012/06/05/how-to-configure-internet-explorer- security-zone-sites-using-group-polices.aspx]()
 
 &#49;&#52;. On the command line, rungpupdate/forceto apply these settings.
 
@@ -80,12 +84,18 @@ A Web Interface URL looks like this: *https://SMBSZXENAPPS1.xa.local/Citrix/PNAg
 * On 64-bit Windows:
 
 ```
-HKLM\SOFTWARE\Wow6432Node\Citrix\AuthmanagerName: ConnectionSecurityModeType: REG_SZData: Any
+HKLM\SOFTWARE\Wow6432Node\Citrix\Authmanager
+Name: ConnectionSecurityMode
+Type: REG_SZ
+Data: Any
 ```
 * On 32-bit Windows:
 
 ```
-HKLM\SOFTWARE\Citrix\AuthManagerName: ConnectionSecurityModeType: REG_SZData: Any
+HKLM\SOFTWARE\Citrix\AuthManager
+Name: ConnectionSecurityMode
+Type: REG_SZ
+Data: Any
 ```
 &#49;&#56;. Restart Citrix Receiver.
 
@@ -95,24 +105,31 @@ values on the endpoint(s) to allow HTTP Basic authentication, which is needed fo
 * On 64-bit Windows:
 
 ```
-HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Citrix\AuthManager\Protocols\httpbasic 
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Citrix\AuthManager\Protocols
+\httpbasic 
 Name: Enabled
 Type: REG_SZ 
 Data: True
 ```
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Citrix\AuthManager 
-Name: ProtocolOrderType: REG_MULTI_SZValue: httpbasic```
+Name: ProtocolOrder
+Type: REG_MULTI_SZ
+Value: httpbasic
+```
 * On 32-bit Windows:
 
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\AuthManager\Protocols\httpbasic 
-Name: EnabledType: REG_SZ 
+Name: Enabled
+Type: REG_SZ 
 Data: True
 ```
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\AuthManager 
-Name: ProtocolOrderType: REG_MULTI_SZData: httpbasic
+Name: ProtocolOrder
+Type: REG_MULTI_SZ
+Data: httpbasic
 ```
 
 &#50;&#48;. To get the store accepted, log on as any user and restart the endpoint.
@@ -124,8 +141,12 @@ Name: ProtocolOrderType: REG_MULTI_SZData: httpbasic
 &#50;&#50;. You can now inject a user name and password into the SSO functionality by interacting with the Fast Connect API, using the LogonSsoUser() function described later in this document.
 
 &#50;&#51;. If you would like the Self-Service Plug-in UI to automatically log on and log off in response to the Fast Connect LogonSSOUser and LogoffSSOUser library calls and thereby update the user’s icons, enable the policy “Integrate Self Service Plugin with FastConnect” described in step 8.
-Alternatively, you can manually update the UI and desktop icons following these calls by using the following sequence:
-```SelfService.exe –ipoll 			// Refreshes the SSP GUI```
+
+Alternatively, you can manually update the UI and desktop icons following these calls by using the following sequence:
+
+```
+SelfService.exe –ipoll 			// Refreshes the SSP GUI
+```
 &#50;&#52;. Start Receiver from the Start menu. The injected user will be logged on to Receiver.
 
 All the user’s applications then appear for the first time on the desktop, the Start menu, and within the SSP GUI.
