@@ -36,8 +36,7 @@ GUI. ![](./gpedit-msc-gui.png)
 
   * Enable the GPO
   * Enable Fast Connect API Functionality 
-  * Disable Leave Apps Running On
-  * Logoff
+  * Disable Leave Apps Running On Logoff
   * Enable Integrate Self Service Plugin with FastConnect
 
 &#49;&#48;. Optionally, in the administrative templates folder, select **Citrix Components** > **Citrix Receiver** > **SelfService** > **Manage App shortcut**:
