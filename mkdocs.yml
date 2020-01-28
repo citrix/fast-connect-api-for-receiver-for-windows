@@ -1,6 +1,7 @@
 site_name: Fast Connect 3 Credential Insertion API
 site_description: Reference and usage of Fast Connect API for Citrix Receiver for Windows 4.2 and later
 site_title: Developer Docs
+site_url: https://developer-docs.citrix.com
 
 # Copyright
 copyright: 'Copyright &copy; 1999-2019 Citrix Systems, Inc. All rights reserved. '
@@ -61,3 +62,4 @@ nav:
 - API functions: api-functions.md
 - Launching Applications and Session Management using the Self Service Plug-in (SSP): launching-applications-and-session-management.md
 - API examples: examples.md
+- Questions?: https://discussions.citrix.com/forum/1385-citrix-developer-exchange/
